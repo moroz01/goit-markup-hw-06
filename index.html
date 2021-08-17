@@ -389,18 +389,17 @@
         </div>
         <div class="joinus">
           <p class="joinus-p">Подпишитесь на рассылку</p>
-        
-          
-        <form action="" class="email-footer">
-          <Input type="email" name="mail" placeholder="E-mail" ></Input>
-          
-          <button type="submit" class="button-primary tosign">Подписаться 
-            <svg class="tosign-icon" width="24" height="24">
-                      <use href="./images/icons.svg#telegram"></use>
-                    </svg>
-          </button>
+
+          <form class="email-footer">
+            <input type="email" name="mail" placeholder="E-mail" />
+
+            <button type="submit" class="button-primary tosign">
+              Подписаться
+              <svg class="tosign-icon" width="24" height="24">
+                <use href="./images/icons.svg#telegram"></use>
+              </svg>
+            </button>
           </form>
-          
         </div>
       </div>
     </footer>
@@ -412,53 +411,58 @@
             <use class="exit" href="./images/icons.svg#close"></use>
           </svg>
         </button>
-        
+
         <form class="js-speaker-form group-form">
           <div role="group" class="group">
-          <h2 class="group-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <h2 class="group-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+            <div class="form-field">
+              <label for="name" class="form-label">Имя</label>
+              <input type="text" name="name" id="name" />
+              <svg class="form-field-icon">
+                <use class="" href="./images/icons.svg#name"></use>
+              </svg>
+            </div>
+
+            <div class="form-field">
+              <label for="tel" class="form-label">Телефон</label>
+              <input type="tel" name="tel" id="tel" autocomplete="off" />
+              <svg class="form-field-icon">
+                <use class="" href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+
+            <div class="form-field">
+              <label for="mail" class="form-label">Почта</label>
+              <input type="email" name="mail" id="mail" />
+              <svg class="form-field-icon">
+                <use class="" href="./images/icons.svg#mail"></use>
+              </svg>
+            </div>
+          </div>
 
           <div class="form-field">
-          <label for="name" class="form-label">Имя</label>
-          <input type="text" name="name" id="name" />
-           <svg class="form-field-icon" >
-            <use class="" href="./images/icons.svg#name"></use>
-          </svg>
-          </div>
-          
-          <div class="form-field">
-          <label for="tel" class="form-label">Телефон</label>
-          <input type="tel" name="tel" id="tel" autocomplete="off" />
-           <svg class="form-field-icon" >
-            <use class="" href="./images/icons.svg#phone"></use>
-          </svg>
-          </div>
-
-          <div class="form-field">
-          <label for="mail" class="form-label">Почта</label>
-          <input type="email" name="mail" id="mail" />
-          <svg class="form-field-icon" >
-            <use class="" href="./images/icons.svg#mail"></use>
-          </svg>
-          </div>
-        </div>
-
-          <div class="form-field">
-          <label for="comment">Комментарий</label>
-          <textarea class="comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+            <label for="comment">Комментарий</label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="comment"
+              placeholder="Введите текст"
+            ></textarea>
           </div>
 
           <div class="form-policy">
-          <input type="checkbox" class="policy-checkbox" name="policy" id="policy" />
-          <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#" class="form-policy-link">Условия договора</a> </label>
+            <label class="policy-checkbox-label">
+              <input type="checkbox" class="policy-checkbox" name="policy" />
+              <span class="policy-checkbox-icon"></span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="#" class="form-policy-link">Условия договора</a>
+            </label>
           </div>
-          
+
           <div class="button-submit">
-          <button type="submit" class="button-primary submit">Отправить</button>
+            <button type="submit" class="button-primary submit">Отправить</button>
           </div>
-
-         
-
-         
         </form>
       </div>
     </div>
