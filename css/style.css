@@ -786,12 +786,6 @@ textarea {
   text-decoration: underline;
 }
 
-.policy-checkbox {
-  width: 15px;
-  height: 15px;
-  border: 2px solid black;
-}
-
 .button-submit {
   text-align: center;
 }
