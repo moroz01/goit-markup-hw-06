@@ -31,6 +31,11 @@ html {
   --footer-link-color: rgba(255, 255, 255, 0.1);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --backdrop-background: rgba(0, 0, 0, 0.2);
+  --field-border: rgba(33, 33, 33, 0.2);
+  --border-footer-color: rgba(255, 255, 255, 0.3);
+  --group-title-color: rgba(33, 33, 33, 1);
+  --modal-submit-color: rgba(24, 140, 232, 1);
+  --modal-border-color: rgba(33, 150, 243, 1);
 }
 
 /* body */
@@ -275,8 +280,8 @@ img {
   transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
-.button-primary:hover,
-.button-primary:focus {
+.button-primary.order:hover,
+.button-primary.order:focus {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
 }
@@ -541,6 +546,7 @@ img {
 /* Joinus */
 .joinus {
   margin-left: 70px;
+  display: block;
 }
 
 .joinus-p {
@@ -548,6 +554,8 @@ img {
   font-weight: 700;
   color: var(--primary-white-color);
   line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 /* Footer Social */
@@ -584,6 +592,41 @@ img {
   background-color: var(--accent-color);
 }
 
+.email-footer {
+  display: flex;
+  border: none;
+}
+
+.email-footer input {
+  min-width: 358px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  background-color: var(--secondary-bg-color);
+  color: var(--border-footer-color);
+  border: 1px solid var(--border-footer-color);
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.tosign-icon {
+  margin-left: 10px;
+}
+
+.button-primary.tosign {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-primary.tosign:hover,
+.button-primary.tosign:focus {
+  color: var(--primary-white-color);
+  background-color: var(--modal-submit-color);
+}
+
 /* Модальное окно */
 .backdrop {
   position: fixed;
@@ -613,8 +656,10 @@ img {
 
   min-width: 528px;
   min-height: 581px;
-
   background-color: var(--primary-white-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 4px;
+
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function);
 }
@@ -628,10 +673,137 @@ img {
   display: flex;
   align-items: center;
 
-  background: white;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  transition: 250ms var(--timing-function);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--modal-border-color);
+  outline: none;
+}
+
+.group-form {
+  width: 450px;
+  margin: 40px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.form-field {
+  /* outline: 1px solid teal; */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.group-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-family: Roboto;
+  color: var(--group-title-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1, 15;
+  letter-spacing: 0.03em;
+}
+
+.form-field input {
+  margin: 0;
+  padding-left: 42px;
+  border: 1px solid var(--field-border);
+  height: 40px;
+  border-radius: 4px;
+  transition: border 250ms var(--timing-function);
+}
+
+.form-field-icon {
+  width: 18px;
+  height: 19px;
+  transition: fill 250ms var(--timing-function);
+}
+
+.form-field textarea {
+  border: 1px solid var(--field-border);
+  height: 120px;
+  border-radius: 4px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border: 1px solid var(--modal-border-color);
+  outline: none;
+}
+
+.form-field input:focus ~ .form-field-icon {
+  fill: #2196f3;
+}
+
+.form-field label {
+  margin-bottom: 5px;
+}
+
+.form-field-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+}
+
+textarea {
+  resize: none;
+}
+
+.comment {
+  padding: 12px 16px;
+}
+
+.form-policy {
+  /* justify-content: center;
+   */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-bottom: 30px;
+
+  padding-left: auto;
+  padding-right: auto;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+}
+
+.form-policy-link {
+  color: var(--modal-border-color);
+  text-decoration: underline;
+}
+
+.policy-checkbox {
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+}
+
+.button-submit {
+  text-align: center;
+}
+
+.button-primary.submit {
+  border: 0;
+}
+
+.button-primary.submit:hover,
+.button-primary.submit:focus {
+  color: var(--primary-white-color);
+  background-color: var(--modal-submit-color);
 }
 
 /* Portfolio */
