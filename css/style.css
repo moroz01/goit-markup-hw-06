@@ -833,6 +833,10 @@ textarea {
   border-color: var(--modal-border-color);
 }
 
+.policy-checkbox:focus + .policy-checkbox-icon {
+  border-color: var(--modal-border-color);
+}
+
 .button-submit {
   text-align: center;
 }
